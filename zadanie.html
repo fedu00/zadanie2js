@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-image: url(pogoda.jpg);
+            background-repeat: no-repeat;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .wrap {
+            position: relative;
+            width: 1000px;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0 auto;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+        }
+        .buttons {
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        a {
+            height: 70px;
+            width: 170px;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            border: 1px solid white;
+            text-align: center;
+            line-height: 70px;
+        }
+        .content {
+            position: absolute;
+            top: 150px;
+            left: -480px;
+            width: 480px;
+            height: 300px;
+            margin: 50px auto 0;
+            border: 1px solid white;
+            transition: 1s;
+        }
+        
+        p {
+            font-size: 60px;
+            color: white;
+            margin: 20px;
+        }
+        p:nth-of-type(2) {
+            font-size: 96px;
+        }
+        .content.show {
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="buttons">
+            <a href="#" class="btn1 show">Cracow</a>
+            <a href="#" class="btn2">New York</a>
+            <a href="#" class="btn3">Tokyo</a>
+        </div>
+        <div class="weather">
+            <div class="content show cracow">
+                <p>Cracow</p>
+                <p>25C</p>
+            </div>
+            <div class="content ny">
+                <p>New York</p>
+                <p>15C</p>
+            </div>
+            <div class="content  tokyo">
+                <p>Tokyo</p>
+                <p>20C</p>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
